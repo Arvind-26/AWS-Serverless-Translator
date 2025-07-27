@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎙️ Audio Translator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎙️ Audio Translator</h1>
+
+    <!-- Language Select -->
+    <div class="lang-select">
+      <div class="lang-group">
+        <label>From Language</label>
+        <select id="fromLanguage">
+          <option value="en-US">English</option>
+          <option value="hi-IN">Hindi</option>
+          <option value="es-ES">Spanish</option>
+          <option value="fr-CA">French</option>
+          <option value="ru-RU">Russian</option>
+          <option value="ko-KR">Korean</option>
+          <option value="ja-JP">Japanese</option>
+          <option value="de-CH">German</option>
+          <option value="it-IT">Italian</option>
+          <option value="ar-AE">Arabic</option>
+        </select>
+      </div>
+
+      <div class="lang-group">
+        <label>To Language</label>
+        <select id="toLanguage">
+          <option value="hi-IN">Hindi</option>
+          <option value="en-US">English</option>
+          <option value="es-ES">Spanish</option>
+          <option value="fr-CA">French</option>
+          <option value="ru-RU">Russian</option>
+          <option value="ko-KR">Korean</option>
+          <option value="ja-JP">Japanese</option>
+          <option value="de-CH">German</option>
+          <option value="it-IT">Italian</option>
+          <option value="ar-AE">Arabic</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Record Button -->
+    <div class="audio-section">
+      <div class="record-container">
+        <button id="recordBtn">🎤 Start Recording</button>
+        <audio id="audioPlayer" controls style="display: none;"></audio>
+      </div>
+    </div>
+
+    <!-- Translate Button -->
+    <button id="translateBtn">
+      <span class="btn-text">🌐 Translate</span>
+    </button>
+
+    <!-- Translated Audio -->
+    <div class="result-section">
+      <div class="section-title">
+        <span>🔊</span>
+        <span>Translated Audio</span>
+      </div>
+      <audio id="translatedAudio" controls style="width: 100%; display: none;"></audio>
+      <div id="audioPlaceholder" class="result-box empty-state">
+        Translated audio will appear here
+      </div>
+    </div>
+
+    <!-- Translated Text -->
+    <div class="result-section">
+      <div class="section-title">
+        <span>📝</span>
+        <span>Translated Text</span>
+      </div>
+      <div id="responseText" class="result-box empty-state">
+        Translated text will appear here
+      </div>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
